@@ -87,6 +87,11 @@ input{
 	padding: 30px;
 	position: relative;
 }
+.wm a {
+	text-decoration: none;
+	padding: 20px 30px;
+}
+
 
 .wm {
 	width: 50%;

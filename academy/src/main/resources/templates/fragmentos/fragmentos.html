@@ -37,11 +37,13 @@
 			</button>
 
 			<div class="navbar-collapse collapse justify-content-end" id="navbMobile">
-				<a class="btn-nav nav-link nav-item" style="letter-spacing: 2px;"  id="hoverBtn"><i class="fas fa-home"></i> Home</a>
+				<a th:href="@{index}" class="btn-nav nav-link nav-item" style="letter-spacing: 2px;"  id="hoverBtn"><i class="fas fa-home"></i> Home</a>
 				<a class="btn-nav nav-link nav-item" style="letter-spacing: 2px;" th:href="@{inserirAlunos}" id="hoverBtn"><i class="fas fa-user-graduate"></i> Cadastrar Aluno</a>
 				<a data-toggle="modal" data-target="#modalPesquisa" class="btn-nav nav-link nav-item" style="letter-spacing: 2px;" id="hoverBtn"> <i class="fas fa-search"></i> Pesquisar Aluno</a>
-				<a class="btn-nav nav-link nav-item btn-danger" style="letter-spacing: 2px;"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
 				
+                <form action="/logout" method="post">
+                    <button type="submit" class="btn-nav nav-link nav-item btn-danger" style="letter-spacing: 2px;"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</button>
+				</form>
 			</div>
 		</nav>
 	</header>

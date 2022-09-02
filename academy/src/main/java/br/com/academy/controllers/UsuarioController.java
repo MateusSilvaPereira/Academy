@@ -28,15 +28,23 @@ public class UsuarioController {
     @Autowired
     private UsuarioDao usuarioRepository;
 
+    @GetMapping("/login")
+    public ModelAndView loginUser(Usuario usuario){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Login/login");
+        mv.addObject("usuario", usuario);
+        return mv;
+    } 
 
     @GetMapping("/")
     public ModelAndView login(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Login/login");
+        mv.addObject("usuario", new Usuario());
         return mv;
     }
 
-    @GetMapping("/index")
+  @GetMapping("/index")
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("home/index");
@@ -56,7 +64,7 @@ public class UsuarioController {
     public ModelAndView cadastrar(Usuario usuario) throws Exception{
         ModelAndView mv = new ModelAndView();
         usuarioService.salvarUsuario(usuario);
-        mv.setViewName("redirect:/");
+        mv.setViewName("redirect:/login");
         return mv;
     }
 
@@ -77,6 +85,12 @@ public class UsuarioController {
         }
 
         return mv;
+}
+
+@PostMapping("/logout")
+public ModelAndView logout(HttpSession session){
+    session.invalidate();
+    return login();
 }
 }
 
