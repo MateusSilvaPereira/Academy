@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="img/Academy.JPG">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -29,15 +30,15 @@
 <!-- Cabeçalho #4527A0-->
 
     <header th:fragment="cabecalho">
-		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #46879b;">
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b2e59;">
 			<a class="navbar-brand" th:href="@{/index}">
-                <img class="imgNav" src="/img/Academy.JPG" width="85px" /></a>
+                <img th:href="@{index}" class="imgNav" src="/img/log.JPG" width="250px" /></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbMobile" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="navbar-collapse collapse justify-content-end" id="navbMobile">
-				<a th:href="@{index}" class="btn-nav nav-link nav-item" style="letter-spacing: 2px;"  id="hoverBtn"><i class="fas fa-home"></i> Home</a>
+				<a th:href="@{/index}" class="btn-nav nav-link nav-item" style="letter-spacing: 2px;"  id="hoverBtn"><i class="fas fa-home"></i> Home</a>
 				<a class="btn-nav nav-link nav-item" style="letter-spacing: 2px;" th:href="@{inserirAlunos}" id="hoverBtn"><i class="fas fa-user-graduate"></i> Cadastrar Aluno</a>
 				<a data-toggle="modal" data-target="#modalPesquisa" class="btn-nav nav-link nav-item" style="letter-spacing: 2px;" id="hoverBtn"> <i class="fas fa-search"></i> Pesquisar Aluno</a>
 				
@@ -50,11 +51,79 @@
 
     <!-- Footer -->
 
-    <footer th:fragment="rodape">
+   <!-- <footer th:fragment="rodape">
         <div class="rodape">
             <span>Todos os direitos Reservados - &copy; Mateus Silva Pereira.</span>
         </div>
+        </footer>-->
+
+        <footer id="footer"  th:fragment="rodape">
+
+            <div class="footer-content">
+                <img src="/img/logo.png" alt="" class="logo">
+                <ul class="footer-menu">
+                  
+                    <p>Empresa</p>
+                    <li class="footer-menu-item">
+                        Sobre
+                    </li>
+                    <li class="footer-menu-item">
+                        Empregos
+                    </li>
+                    <li class="footer-menu-item">
+                        For the record
+                    </li>
+                </ul>
+                <ul class="footer-menu">
+                    <p>Comunidades</p>
+                    <li class="footer-menu-item">
+                        Para Estudante
+                    </li>
+                    <li class="footer-menu-item">
+                        Desenvolvedores
+                    </li>
+                    <li class="footer-menu-item">
+                        Livros Academicos
+                    </li>
+                   
+                </ul>
+                <ul class="footer-menu">
+                    <p>Links úteis</p>
+                    <li class="footer-menu-item">
+                        Ajuda
+                    </li>
+                    <li class="footer-menu-item">
+                        Academy University
+                    </li>
+                    <li class="footer-menu-item">
+                        Aplicativo Estudantil
+                    </li>
+                </ul>
+                <div class="socials">
+                    <a href="https://www.instagram.com/mateussilvapereira2018/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/Mateus11907278"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100026711003779"><i class="fa fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <ul class="footer-info-items">
+                    <li class="footer-info-item">Legal</li>
+                    <li class="footer-info-item">Centro de Privacidade</li>
+                    <li class="footer-info-item">Política de Privacidade</li>
+                    <li class="footer-info-item">Cookies</li>
+                    <li class="footer-info-item">Sobre anúncios</li>
+                </ul>
+                <div class="rights">
+                    <div class="country">
+                        <p>Brasil</p>
+                        <img src="/img/brazil.png" alt="" class="brazil-flag">
+                    </div>
+                    <p>Todos os direitos Reservados - &copy; Mateus Silva Pereira.</p>
+                </div>
+            </div>
         </footer>
+
+
 
     
 <!-- Optional JavaScript -->

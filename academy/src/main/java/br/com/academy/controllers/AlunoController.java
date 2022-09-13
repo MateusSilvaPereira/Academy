@@ -23,6 +23,7 @@ public class AlunoController {
     @Autowired
     private AlunoDao alunoRepository;
 
+ 
     @GetMapping("/inserirAlunos")
     public ModelAndView InsertAlunos(Aluno aluno){
         ModelAndView mv = new ModelAndView();

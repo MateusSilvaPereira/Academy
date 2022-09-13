@@ -21,6 +21,7 @@ public class Usuario {
     @Size(min = 3, max = 20, message = "Usuario deve conter entre 3 a 20 carcteres")
     private String user;
     private String senha;
+    private String imagem;
 
     
     public Long getId() {
